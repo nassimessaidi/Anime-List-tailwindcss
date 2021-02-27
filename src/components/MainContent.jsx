@@ -24,7 +24,7 @@ function MainContent(props) {
   }, [query]);
 
   return (
-    <main className="flex flex-col items-center w-full m-auto my-5 space-y-4">
+    <main className="flex flex-col items-center w-full m-auto my-6 space-y-10">
       <form
         className="flex w-4/5 items-center justify-center"
         onSubmit={handleSearch}
