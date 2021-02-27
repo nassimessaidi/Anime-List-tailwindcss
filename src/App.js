@@ -5,9 +5,7 @@ import ListAnime from "./components/ListAnime";
 import MainContent from "./components/MainContent";
 
 function App() {
-  const [animeList, setAnimeList] = useState([]);
   const [topAnime, setTopAnime] = useState([]);
-  const [search, setSearch] = useState("");
 
   const getTopAnimes = async () => {
     const data = await fetch(
@@ -15,9 +13,6 @@ function App() {
     ).then((response) => response.json());
 
     setTopAnime(data.top.slice(0, 5));
-  };
-  const handleSearch = (e) => {
-    e.preventDefault();
   };
 
   useEffect(() => {

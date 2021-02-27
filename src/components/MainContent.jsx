@@ -4,8 +4,9 @@ import AnimeCard from "./AnimeCard";
 function MainContent(props) {
   const [animeList, setAnimeList] = useState([]);
   const [search, setSearch] = useState("");
+  const [query, setQuery] = useState("naruto");
 
-  const fetchAnime = async (query) => {
+  const fetchAnime = async () => {
     const data = await fetch(
       `https://api.jikan.moe/v3/search/anime?q=${query}$order_by=title&sort=asc&limit=10`
     ).then((res) => res.json());
@@ -15,8 +16,12 @@ function MainContent(props) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    fetchAnime(search);
+    setQuery(search);
   };
+
+  useEffect(() => {
+    fetchAnime();
+  }, [query]);
 
   return (
     <main className="flex flex-col items-center w-full m-auto my-5 space-y-4">
