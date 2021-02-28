@@ -6,21 +6,21 @@ function MainContent(props) {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("naruto");
 
-  const fetchAnime = async () => {
-    const data = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=${query}$order_by=title&sort=asc&limit=10`
-    ).then((res) => res.json());
-
-    setAnimeList(data.results);
-  };
-
   const handleSearch = (e) => {
     e.preventDefault();
     setQuery(search);
   };
 
+  const fetchAnime = async (_query) => {
+    const data = await fetch(
+      `https://api.jikan.moe/v3/search/anime?q=${_query}$order_by=title&sort=asc&limit=10`
+    ).then((res) => res.json());
+
+    setAnimeList(data.results);
+  };
+
   useEffect(() => {
-    fetchAnime();
+    fetchAnime(query);
   }, [query]);
 
   return (
