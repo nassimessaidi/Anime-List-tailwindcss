@@ -64,10 +64,12 @@ function Nav() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <h1 className="cursor-pointer ml-2 text-gray-300 text-center font-small tracking-tight uppercase text-3xl">
-                My <span className="font-black text-gray-100">Anime</span> List
-                DB
-              </h1>
+              <NavLink to="/">
+                <h1 className="cursor-pointer ml-2 text-gray-300 text-center font-small tracking-tight uppercase text-3xl">
+                  My <span className="font-black text-gray-100">Anime</span>{" "}
+                  List DB
+                </h1>
+              </NavLink>
             </div>
 
             <div className="hidden sm:block sm:ml-6">
