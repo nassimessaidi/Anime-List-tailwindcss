@@ -12,7 +12,7 @@ function App() {
       `https://api.jikan.moe/v3/top/anime/1/bypopularity`
     ).then((response) => response.json());
 
-    setTopAnime(data.top.slice(0, 5));
+    setTopAnime(data.top.slice(0, 10));
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <div className="m-auto font-sans bg-gray-50 min-h-screen">
+        <div className="pb-5 mx-auto font-sans bg-gray-50 min-h-screen">
           <Header />
           <section className="">
             <Route path="/" exact component={() => <MainContent />} />

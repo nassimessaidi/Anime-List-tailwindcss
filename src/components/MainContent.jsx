@@ -24,7 +24,7 @@ function MainContent(props) {
   }, [query]);
 
   return (
-    <main className="flex flex-col items-center w-full m-auto my-6 space-y-10">
+    <main className="pb-6 flex flex-col items-center w-full m-auto my-6 space-y-10 overflow-y-hidden">
       <form
         className="flex w-4/5 items-center justify-center"
         onSubmit={handleSearch}
@@ -39,7 +39,7 @@ function MainContent(props) {
           onChange={(e) => setSearch(e.target.value)}
         />
       </form>
-      <section className="max-w-5xl grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+      <section className=" grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-6">
         {animeList.map((_anime) => (
           <AnimeCard _anime={_anime} />
         ))}

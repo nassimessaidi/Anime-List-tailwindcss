@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [styles, setStyles] = useState("");
+  const [isOpen, setIsOpen] = useState(true);
+  const [styles, setStyles] = useState("hidden");
   const handleStyles = () => {
-    if (!isOpen) {
-      setStyles("hidden");
-    } else setStyles("");
+    if (isOpen) {
+      setStyles("");
+    } else setStyles("hidden");
   };
 
   return (
