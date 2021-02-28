@@ -2,7 +2,7 @@ import React from "react";
 
 function ListAnime({ topAnime }) {
   return (
-    <div className=" text-lg font-semibold text-gray-800 flex flex-col max-w-lg m-auto space-y-5 mt-5">
+    <div className="px-5 text-lg font-semibold text-gray-800 flex flex-col sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl m-auto space-y-5 mt-5">
       <h1 className="text-xl text-blue-400 py-1 font-black uppercase text-center">
         Top animes
       </h1>
