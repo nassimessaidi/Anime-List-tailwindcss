@@ -26,7 +26,7 @@ function MainContent(props) {
   return (
     <main className="pb-6 flex flex-col items-center w-full m-auto my-6 space-y-10 overflow-y-hidden">
       <form
-        className="flex w-4/5 items-center justify-center"
+        className="p-1 flex w-4/5 items-center justify-center"
         onSubmit={handleSearch}
       >
         {console.log(animeList)}
