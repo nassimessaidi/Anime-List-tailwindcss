@@ -29,7 +29,6 @@ function MainContent(props) {
         className="p-1 flex w-4/5 items-center justify-center"
         onSubmit={handleSearch}
       >
-        {console.log(animeList)}
         <input
           className="w-full px-4 py-2 border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent shadow-md"
           type="search"
@@ -41,7 +40,7 @@ function MainContent(props) {
       </form>
       <section className=" grid grid-cols-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-6">
         {animeList.map((_anime) => (
-          <AnimeCard _anime={_anime} />
+          <AnimeCard _anime={_anime} key={_anime.mal_id} />
         ))}
       </section>
     </main>

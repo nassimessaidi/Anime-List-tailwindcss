@@ -22,16 +22,18 @@ function App() {
   return (
     <Router>
       <Switch>
-        <div className="pb-5 mx-auto font-sans bg-gray-50 min-h-screen">
-          <Header />
-          <section className="">
-            <Route path="/" exact component={() => <MainContent />} />
-            <Route
-              path="/top-anime"
-              component={() => <ListAnime topAnime={topAnime} />}
-            />
-          </section>
-        </div>
+        <>
+          <div className="pb-5 mx-auto font-sans bg-gray-50 min-h-screen">
+            <Header />
+            <section className="">
+              <Route path="/" exact component={MainContent} />
+              <Route
+                path="/top-anime"
+                component={() => <ListAnime topAnime={topAnime} />}
+              />
+            </section>
+          </div>
+        </>
       </Switch>
     </Router>
   );
