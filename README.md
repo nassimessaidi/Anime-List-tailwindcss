@@ -8,10 +8,10 @@ Anime search list using an API with tailwind css
 ## Note
 You can switch between different branches to explorer the version just using props and the version of context API.
 
-the version in the master branch is using `Context API`.
+The version in the master branch is using `Context API`.
 
-you can toggle between them, the name is very descriptive
+You can toggle between them, the name is very descriptive
 
-### branches name: 
+### Branches name: 
 * `usingProps`
 * `usingContextAPI`
