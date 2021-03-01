@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import AnimeCard from "./AnimeCard";
+import { MyAnimeListContext } from "../contexts/MyAnimeListContext";
 
 function MainContent(props) {
-  const [animeList, setAnimeList] = useState([]);
-  const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("naruto");
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setQuery(search);
-  };
-
-  const fetchAnime = async (_query) => {
-    const data = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=${_query}$order_by=title&sort=asc&limit=10`
-    ).then((res) => res.json());
-
-    setAnimeList(data.results);
-  };
-
-  useEffect(() => {
-    fetchAnime(query);
-  }, [query]);
+  const { animeList, search, setSearch, handleSearch } = useContext(
+    MyAnimeListContext
+  );
 
   return (
     <main className="pb-6 flex flex-col items-center w-full m-auto my-6 space-y-10 overflow-y-hidden">
