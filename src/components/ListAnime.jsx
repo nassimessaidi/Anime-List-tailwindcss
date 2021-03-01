@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TopAnimeListContext } from "../contexts/TopAnimeListContext";
 
-function ListAnime({ topAnime }) {
+const ListAnime = () => {
+  const topAnime = useContext(TopAnimeListContext);
+
   return (
     <div className="pb-8 px-5 text-lg font-semibold text-gray-800 flex flex-col  md:min-w-md lg:max-w-3xl  m-auto space-y-5 mt-5">
       <h1 className="text-xl text-blue-400 py-1 font-black uppercase text-center">
@@ -24,6 +27,6 @@ function ListAnime({ topAnime }) {
       ))}
     </div>
   );
-}
+};
 
 export default ListAnime;
