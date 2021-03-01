@@ -1,6 +1,6 @@
-# Anime List using ReactJs & TailwindCss
+# Anime List using React Js & Tailwind Css
 
-Anime search  list using an API with tailwindcss
+Anime search list using an API with tailwind css
 
 ## Live Preview 
 
